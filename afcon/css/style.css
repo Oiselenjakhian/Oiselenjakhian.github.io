@@ -1,0 +1,53 @@
+*{ margin: 0; padding: 0; }
+
+h2 {
+	text-align: center;
+	padding: 20px;
+}
+
+/* Screen Area */
+.screen {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#map {
+    max-width: 100%;
+    height: auto;
+    background: #3898E5;
+}
+
+@media screen and (min-width: 450px) {
+	.screen {
+		width: 450px;
+	}
+}
+
+/* On screens that are 1000px or less, set the width of the screen div to 100% */
+@media screen and (max-width: 450px) {
+	.screen {
+		width: 100%;
+	}
+}
+
+/* App Choice */
+.app {
+	text-align: center;
+}
+
+.country {
+	text-align: center;
+}
+
+fieldset { 
+	display: block;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-top: 0.35em;
+	padding-bottom: 0.625em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	border: 2px groove (internal value);
+}
