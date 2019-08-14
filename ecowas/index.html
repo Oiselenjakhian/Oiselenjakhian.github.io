@@ -4,7 +4,40 @@
 		<meta charset="utf-8">
 		<title>Interactive ECOWAS Map</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="style.css" type="text/css">
+		<style>
+			*{ margin: 0; padding: 0; }
+
+			.screen {
+				text-align: center;
+				display: block;
+			    margin-left: auto;
+			    margin-right: auto;
+			    margin-bottom: 20px;
+			}
+
+			@media screen and (min-width: 500px) {
+				.screen {
+					width: 500px;
+				}
+			}
+
+			/* On screens that are 500px or less, set the width of the screen div to 100% */
+			@media screen and (max-width: 500px) {
+				.screen {
+					width: 100%;
+				}
+			}
+
+			#map {
+			    max-width: 100%;
+			    height: auto;
+			    background: #FFF;
+			}
+
+			svg {
+				border: 1px solid black;
+			}
+		</style>
 	</head>
 	
 	<body>
