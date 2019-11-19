@@ -1,0 +1,30 @@
+*{ margin: 0; padding: 0; }
+
+@media screen and (min-width: 450px) {
+	.screen {
+		width: 450px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.screen {
+		width: 100%;
+	}
+}
+
+.screen {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+#map {
+    background: #FFF;
+}
+
+body{
+    background: #000;
+}
