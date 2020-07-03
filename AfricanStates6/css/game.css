@@ -1,0 +1,198 @@
+*{ margin: 0; padding: 0; }
+html, body { height: 100%; width: 100%; }
+canvas { display: block; }
+
+body{
+    background: #000;
+    color: #fff;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 18px;
+}
+
+h1{
+    font-size: 25px;
+}
+
+p{
+    margin: 0 20px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a.button{
+    background: #185da8;
+    border-radius: 5px;
+    display: block;
+    font-size: 30px;
+    margin: 40px 0 0 320px;
+    padding: 10px;
+    width: 200px;
+}
+
+a.button:hover{
+    background: #2488f5;
+    color: #fff;
+    text-decoration: none;
+}
+
+#game{
+    height: 600px;
+    left: 50%;
+    margin: -310px 0 0 -450px;
+    position: relative;
+    top: 50%;
+    width: 900px;
+}
+
+#gameCanvas{
+    background: #001022;
+}
+
+#gameUI{
+    height: 600px;
+    position: absolute;
+    width: 900px;
+}
+
+#gameIntro, #gameComplete{
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#gameStats{
+    font-size: 12px;
+}
+
+#gameStats .gameReset{
+    margin: 20px 20px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#maparea{
+    height: 600px;
+    position: absolute;
+    width: 600px;
+    background:url(../img/grid.jpg) repeat;
+}
+
+#movesDisplay{
+    font-size: 20px;
+    margin: 100px 80px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+}
+
+#gameStats  .moves{
+    font-size: 40px;
+    margin: 130px 110px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+}
+
+#accuracyDisplay{
+    font-size: 30px;
+    margin: 200px 80px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+}
+
+#gameStats  .gameScore{
+    font-size: 40px;
+    margin: 240px 110px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+}
+
+#gameStats .countryName{
+    font-size: 15px;
+    margin: 330px 20px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#countryFlag{
+    height: 100px;
+    margin: 370px 75px 0 0;
+    width: 150px;
+    background:url(../img/grid.jpg) repeat;
+    float: right;
+}
+
+#gameStats .gameTime{
+    margin: 550px 20px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.web_dialog_overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    opacity: .15;
+    filter: alpha(opacity=15);
+    -moz-opacity: .15;
+    z-index: 101;
+    display: none;
+}
+
+.web_dialog{
+    display: none;
+    position: fixed;
+    width: 380px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-left: -190px;
+    margin-top: -100px;
+    background-color: #ffffff;
+    border: 2px solid #336699;
+    padding: 0px;
+    z-index: 102;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+
+.web_dialog_title{
+    border-bottom: solid 2px #336699;
+    background-color: #336699;
+    padding: 4px;
+    color: White;
+    font-weight:bold;
+}
+
+.web_dialog_title a{
+    color: White;
+    text-decoration: none;
+}
+
+.align_right{
+    text-align: right;
+}
