@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url("bg-intro-desktop.png");
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left-div {
+    width: 100%;
+    margin-right: 40px;
+}
+
+.right-div {
+    width: 100%;
+    margin: 0 10px;
+}
+
+h1 {
+    padding: 1em 0;
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+form {
+    width: 100%;
+    border: 1px solid hsl(246, 25%, 77%);
+    padding: 2em;
+    border-radius: 5px;
+    background-color: white;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+}
+
+input[type="text"]:focus {
+    border: 1px solid hsl(248, 32%, 49%);
+}
+
+/* input:invalid {
+    background: url("icon-error.svg") no-repeat 95% 50%;
+    background-size: 25px;
+    border-color: red;
+} */
+
+button {
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid hsl(154, 59%, 51%);
+    margin: 8px 0;
+}
+
+.try {
+    color: white;
+}
+
+.try span {
+    font-weight: bold;
+}
+
+.text-large {
+    font-size: xx-large;
+}
+
+.text-small {
+    font-size: x-small;
+    text-align: center;
+    color: hsl(246, 25%, 77%);
+}
+
+#terms {
+    font-weight: bold;
+    color: hsl(0, 100%, 74%);
+}
+
+.upper-content {
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 5px;
+    padding: 10px 30px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.23);
+}
+
+.left-div p {
+    color: white;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-color: hsl(0, 100%, 74%);
+        background-image: url("bg-intro-mobile.png");    
+    }
+
+    main {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .left-div {
+        text-align: center;
+        padding: 2em;
+    }
+
+    .right-div {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
