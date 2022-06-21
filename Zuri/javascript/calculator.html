@@ -5,32 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-	</head>
+</head>
 <body>
     <script>
-		// Ask the user for the first number
-		var firstNumber = prompt("Please enter the first number: ");
+	// Ask the user for the first number
+	var firstNumber = prompt("Please enter the first number: ");
 		
-		// Convert the text into a number
-		firstNumber = Number(firstNumber);
+	// Convert the text into a number
+	firstNumber = Number(firstNumber);
 		
-		// Ask the user for the second number
-		var secondNumber = prompt("Please enter the second number: ");
+	// Ask the user for the second number
+	var secondNumber = prompt("Please enter the second number: ");
 		
-		// Convert the text into a number
-		secondNumber = Number(secondNumber);
+	// Convert the text into a number
+	secondNumber = Number(secondNumber);
 		
-		// Display the sum
-		document.writeln("The sum of " + firstNumber + " and " + secondNumber + " is " + (firstNumber + secondNumber) + "<br>");
-		
-		// Display the difference
-		document.writeln("The difference between " + firstNumber + " and " + secondNumber + " is " + (firstNumber - secondNumber) + "<br>");
-		
-		// Display the product
-		document.writeln("The product of " + firstNumber + " and " + secondNumber + " is " + (firstNumber * secondNumber) + "<br>");
-		
-		// Display the quotient
-		document.writeln("The quotient of " + firstNumber + " and " + secondNumber + " is " + (firstNumber / secondNumber));
-	</script>
+	// Display an alert
+	alert("The sum of " + firstNumber + " and " + secondNumber + " is: " + (firstNumber + secondNumber) + "\n" +
+	"The difference between " + firstNumber + " and " + secondNumber + " is: " + (firstNumber - secondNumber) + "\n" +
+	"The product of " + firstNumber + " and " + secondNumber + " is: "  + (firstNumber * secondNumber) + "\n" +
+	"The quotient of " + firstNumber + " and " + secondNumber + " is: "  + (firstNumber / secondNumber));
+    </script>
 </body>
 </html>
