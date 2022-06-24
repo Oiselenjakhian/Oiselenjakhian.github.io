@@ -8,23 +8,40 @@
 </head>
 <body>
     <script>
-	// Ask the user for the first number
-	var firstNumber = prompt("Please enter the first number: ");
+		// Ask the user to enter an operator
+		var operator = prompt("Please enter the operation you want to perform" + "\n\n" + "eg +,-,/.*" + "\n");
 		
-	// Convert the text into a number
-	firstNumber = Number(firstNumber);
+		// Ask the user for the first number
+		var firstNumber = prompt("Please enter the first number" + "\n");
 		
-	// Ask the user for the second number
-	var secondNumber = prompt("Please enter the second number: ");
+		// Convert the text into a number
+		firstNumber = Number(firstNumber);
 		
-	// Convert the text into a number
-	secondNumber = Number(secondNumber);
+		// Ask the user for the second number
+		var secondNumber = prompt("Please enter the second number" + "\n\n" + firstNumber.toString() + " " + operator + "\n");
 		
-	// Display an alert
-	alert("The sum of " + firstNumber + " and " + secondNumber + " is: " + (firstNumber + secondNumber) + "\n" +
-	"The difference between " + firstNumber + " and " + secondNumber + " is: " + (firstNumber - secondNumber) + "\n" +
-	"The product of " + firstNumber + " and " + secondNumber + " is: "  + (firstNumber * secondNumber) + "\n" +
-	"The quotient of " + firstNumber + " and " + secondNumber + " is: "  + (firstNumber / secondNumber));
-    </script>
+		// Convert the text into a number
+		secondNumber = Number(secondNumber);
+		
+		if (operator.trim() === "+") {			
+			// Print out the sum
+			alert("The sum of " + firstNumber + " and " + secondNumber + " is: " + (firstNumber + secondNumber));
+		}
+		else if (operator.trim() === "-") {
+			// Print out the difference
+			alert("The difference between " + firstNumber + " and " + secondNumber + " is: " + (firstNumber - secondNumber));
+		}
+		else if (operator.trim() === "/") {
+			// Print out the quotient
+			alert("The quotient of " + firstNumber + " and " + secondNumber + " is: "  + (firstNumber / secondNumber));
+		}
+		else if (operator.trim() === "*") {
+			// Print out the product
+			alert("The product of " + firstNumber + " and " + secondNumber + " is: "  + (firstNumber * secondNumber));
+		}
+		else {
+			alert("Invalid operator");
+		}
+	</script>
 </body>
 </html>
