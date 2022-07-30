@@ -134,17 +134,17 @@ class gameScreen extends Phaser.Scene {
         pos_target_num = this.add.image(270, 480, "pos_target_num");
         pos_buttons = this.add.image(270, 480, "pos_buttons");
         timeText = this.add.text(20, 50, "Time: 0", {
-            fontSize: "40px",
+            fontSize: "35px",
             fill: "#fff",
             fontFamily: "roboto-slab, serif",
         });
         totalText = this.add.text(170, 50, "Total: 0", {
-            fontSize: "40px",
+            fontSize: "35px",
             fill: "#fff",
             fontFamily: "roboto-slab, serif",
         });
         scoreText = this.add.text(340, 50, "Score: 0", {
-            fontSize: "40px",
+            fontSize: "35px",
             fill: "#fff",
             fontFamily: "roboto-slab, serif",
         });
@@ -153,13 +153,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 1;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -176,13 +176,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 2;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -199,13 +199,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 3;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -222,13 +222,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 4;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -245,13 +245,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 5;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -268,13 +268,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 6;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -291,13 +291,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 7;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -314,13 +314,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 8;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -337,13 +337,13 @@ class gameScreen extends Phaser.Scene {
             total = total + 9;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
 
             if (total == displayValue) {
                 score = score + 1;
                 scoreText.setText("Score: " + score.toString());
                 scoreText.setFont("roboto-slab, serif");
-                scoreText.setFontSize("40px");
+                scoreText.setFontSize("35px");
 
                 time = getTime(score);
 
@@ -361,7 +361,7 @@ class gameScreen extends Phaser.Scene {
             total = 0;
             totalText.setText("Total: " + total.toString());
             totalText.setFont("roboto-slab, serif");
-            totalText.setFontSize("40px");
+            totalText.setFontSize("35px");
         });
         target = this.add.sprite(270, 480, "atlas", "0-display.png");
         pause = this.add.sprite(270, 870, "atlas", "pause_button.png");
@@ -399,7 +399,7 @@ function timer() {
         gameTimeout = setTimeout(function () {
             timeText.setText("Time: " + time.toString());
             timeText.setFont("roboto-slab, serif");
-            timeText.setFontSize("40px");
+            timeText.setFontSize("35px");
             time--;
             if (time == -1) {
                 gameOver();
@@ -435,15 +435,15 @@ function restartGame() {
     time = 0;
     timeText.setText("Time: " + time.toString());
     timeText.setFont("roboto-slab, serif");
-    timeText.setFontSize("40px");
+    timeText.setFontSize("35px");
     total = 0;
     totalText.setText("Total: " + total.toString());
     totalText.setFont("roboto-slab, serif");
-    totalText.setFontSize("40px");
+    totalText.setFontSize("35px");
     score = 0;
     scoreText.setText("Score: " + score.toString());
     scoreText.setFont("roboto-slab, serif");
-    scoreText.setFontSize("40px");
+    scoreText.setFontSize("35px");
 }
 
 function pauseGame() {
@@ -525,7 +525,7 @@ function clearTotal() {
     total = 0;
     totalText.setText("Total: " + total.toString());
     totalText.setFont("roboto-slab, serif");
-    totalText.setFontSize("40px");
+    totalText.setFontSize("35px");
 }
 
 function getUpperLimit(score) {
