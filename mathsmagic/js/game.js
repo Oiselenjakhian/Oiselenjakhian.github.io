@@ -25,7 +25,6 @@ var info;
 var upperLimit;
 var displayValue = 0;
 var display;
-var target;
 var playGame;
 var gameTimeout;
 var gameOverOverlay;
@@ -530,7 +529,7 @@ function clearTotal() {
 
 function getUpperLimit(score) {
     if (score >= 0 && score < 50) {
-        return 10;
+        return 15;
     } else if (score >= 50 && score < 100) {
         return 20;
     } else {
