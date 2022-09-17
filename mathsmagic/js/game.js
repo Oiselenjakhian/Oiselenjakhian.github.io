@@ -523,7 +523,7 @@ function timer() {
             } else {
                 timer();
             }
-        }, Phaser.Timer.SECOND * 1000);
+        }, 1000);
     }
 }
 
