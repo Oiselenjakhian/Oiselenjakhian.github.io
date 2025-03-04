@@ -209,9 +209,6 @@ $(document).ready(function() {
 					};
 				},
 				onEachFeature: function(feature, layer) {
-					// Display a popup showing the name of the state
-					layer.bindPopup(feature.properties.admin1Name);
-					
 					// Display a tooltip showing the name of the state on mouse over
 					layer.on('mouseover', function(e) {
 						layer.bindTooltip(feature.properties.admin1Name, { permanent: false, direction: 'top' }).openTooltip();
@@ -293,9 +290,6 @@ $(document).ready(function() {
 		lgasLayer = L.geoJson(filteredLGAs, {
 			style: { color: 'white', weight: 1 },
 			onEachFeature: function(feature, layer) {
-				// Display a popup showing the name of the local government area
-				layer.bindPopup(feature.properties.admin2Name);
-				
 				layer.on('mouseover', function(e) {
 					layer.bindTooltip(feature.properties.admin2Name, { permanent: false, direction: 'top' }).openTooltip();
 				});
