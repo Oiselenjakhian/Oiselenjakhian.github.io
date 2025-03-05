@@ -24,6 +24,15 @@ $(document).ready(function() {
 			// Reset all state styles
 			geojsonLayer.resetStyle();
 			
+			// Show all state names again
+			geojsonLayer.eachLayer(function (layer) {
+				layer.bindTooltip(layer.feature.properties.admin1Name, {
+					permanent: true,
+					direction: "center",
+					className: "state-label"
+				}).openTooltip();
+			});
+			
 			// Hide the lga div if Nigeria is selected
 			$('.lga').hide();
 			
