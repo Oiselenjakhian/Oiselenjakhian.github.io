@@ -209,15 +209,12 @@ $(document).ready(function() {
 					};
 				},
 				onEachFeature: function(feature, layer) {
-					// Display a tooltip showing the name of the state on mouse over
-					layer.on('mouseover', function(e) {
-						layer.bindTooltip(feature.properties.admin1Name, { permanent: false, direction: 'top' }).openTooltip();
-					});
-					
-					// Close the tooltip
-					layer.on('mouseout', function(e) {
-						layer.closeTooltip();
-					});
+					// Add permanent label to each state
+					layer.bindTooltip(feature.properties.admin1Name, {
+						permanent: true,
+						direction: "center",
+						className: "state-label"
+					}).openTooltip();
 					
 					layer.on('click', function(e) {
 						// Prevent default focus
@@ -231,6 +228,7 @@ $(document).ready(function() {
 						
 						// Reset styles for all states
 						geojsonLayer.eachLayer(function(layer) {
+							layer.unbindTooltip();
 							geojsonLayer.resetStyle(layer);
 						});
 						
