@@ -6,7 +6,8 @@ $(document).ready(function() {
 	$('.lga').hide();
 	
 	// Center Nigeria on the map
-	var map = L.map('map').setView([9.082, 8.6753], 6);
+	var initialZoom = window.innerWidth < 768 ? 5 : 6; // Adjust zoom for mobile
+	var map = L.map('map').setView([9.082, 8.6753], initialZoom);
 	
 	// Define your GeoJSON layers
 	var statesLayer, lgasLayer, selectedLGALayer, geojsonLayer;
@@ -19,7 +20,7 @@ $(document).ready(function() {
 		// Show the lga div if the any state is selected
 		if (selectedState == "Nigeria") {
 			// Reset to the whole Nigeria			
-			map.setView([9.082, 8.6753], 6);
+			map.setView([9.082, 8.6753], initialZoom);
 			
 			// Reset all state styles
 			geojsonLayer.resetStyle();
@@ -34,7 +35,7 @@ $(document).ready(function() {
 
 				// Adjust position for Cross River state
 				if (layer.feature.properties.admin1Name === "Cross River") {
-					tooltipOptions.offset = [0, -50];
+					tooltipOptions.offset = [0, -30];
 				}
 
 				layer.bindTooltip(layer.feature.properties.admin1Name, tooltipOptions).openTooltip();
@@ -233,7 +234,7 @@ $(document).ready(function() {
 
 					// Adjust position for Cross River state
 					if (feature.properties.admin1Name === "Cross River") {
-						tooltipOptions.offset = [0, -50];
+						tooltipOptions.offset = [0, -30];
 					}
 
 					layer.bindTooltip(feature.properties.admin1Name, tooltipOptions).openTooltip();
