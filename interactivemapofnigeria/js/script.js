@@ -26,11 +26,18 @@ $(document).ready(function() {
 			
 			// Show all state names again
 			geojsonLayer.eachLayer(function (layer) {
-				layer.bindTooltip(layer.feature.properties.admin1Name, {
+				var tooltipOptions = {
 					permanent: true,
 					direction: "center",
 					className: "state-label"
-				}).openTooltip();
+				};
+
+				// Adjust position for Cross River state
+				if (layer.feature.properties.admin1Name === "Cross River") {
+					tooltipOptions.offset = [0, -50];
+				}
+
+				layer.bindTooltip(layer.feature.properties.admin1Name, tooltipOptions).openTooltip();
 			});
 			
 			// Hide the lga div if Nigeria is selected
@@ -218,12 +225,18 @@ $(document).ready(function() {
 					};
 				},
 				onEachFeature: function(feature, layer) {
-					// Add permanent label to each state
-					layer.bindTooltip(feature.properties.admin1Name, {
+					var tooltipOptions = {
 						permanent: true,
 						direction: "center",
 						className: "state-label"
-					}).openTooltip();
+					};
+
+					// Adjust position for Cross River state
+					if (feature.properties.admin1Name === "Cross River") {
+						tooltipOptions.offset = [0, -50];
+					}
+
+					layer.bindTooltip(feature.properties.admin1Name, tooltipOptions).openTooltip();
 					
 					layer.on('click', function(e) {
 						// Prevent default focus
