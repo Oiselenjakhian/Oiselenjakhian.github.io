@@ -4,7 +4,15 @@ body {
 }
 
 #map {
-	height: 450px;
+    height: 60vh; /* Adjust height dynamically based on viewport */
+    width: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .leaflet-tooltip.state-label {
+        font-size: 10px; /* Reduce font size for better display */
+    }
 }
 
 .leaflet-interactive:focus {
