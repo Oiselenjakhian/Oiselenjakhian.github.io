@@ -11,16 +11,6 @@ body {
     outline: none !important;
 }
 
-.state-label {
-    font-size: 10px;
-    font-weight: bold;
-    color: black;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 1px 3px;
-    border-radius: 3px;
-    text-align: center;
-}
-
 .leaflet-tooltip.state-label {
     background: transparent !important;
     border: none !important;
