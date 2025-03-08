@@ -7,7 +7,7 @@ $(document).ready(function() {
 	
 	// Center Nigeria on the map
 	var initialZoom = window.innerWidth < 768 ? 5 : 6; // Adjust zoom for mobile
-	var map = L.map('map').setView([9.082, 8.6753], initialZoom);
+	var map = L.map('map', { attributionControl:false }).setView([9.082, 8.6753], initialZoom);
 	
 	// Define your GeoJSON layers
 	var statesLayer, lgasLayer, selectedLGALayer, geojsonLayer;
