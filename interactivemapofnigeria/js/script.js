@@ -66,7 +66,7 @@ $(document).ready(function() {
 			var lgaLegend = document.getElementById("legend-lga");
 			
 			// Differentiate with the showing of state
-			if (selectedState == "Federal Capital Territory") {
+			if (selectedState == "FCT") {
 				lgaLegend.innerHTML = 'Please select a local government area in ' + selectedState;
 			}
 			else {
@@ -146,6 +146,12 @@ $(document).ready(function() {
 		}
 	});
 	
+	map.on('zoomend', function() {
+		var zoomLevel = map.getZoom();
+		var fontSize = 10 + (zoomLevel - 5) * 2; // Adjust base size and increment as needed
+		$('.leaflet-tooltip.state-label').css('font-size', fontSize + 'px');
+	});
+	
 	// Define the colours for each individual state
 	var stateColors = {
 		"Abia": "#2FD600",
@@ -162,7 +168,7 @@ $(document).ready(function() {
 		"Edo": "#FF2700",
 		"Ekiti": "#FFFF00",
 		"Enugu": "#6681FF",
-		"Federal Capital Territory": "#FF2700",
+		"FCT": "#FF2700",
 		"Gombe": "#2FD600",
 		"Imo": "#FF2700",
 		"Jigawa": "#FF8130",
