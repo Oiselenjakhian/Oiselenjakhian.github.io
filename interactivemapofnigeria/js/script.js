@@ -5,6 +5,9 @@ $(document).ready(function() {
 	// Hide the div for lga on page load
 	$('.lga').hide();
 	
+	// Hide the div for the distributors on page load
+	$('.distributors').hide();
+	
 	// Center Nigeria on the map
 	var initialZoom = window.innerWidth < 768 ? 5 : 6; // Adjust zoom for mobile
 	var map = L.map('map', { attributionControl:false }).setView([9.082, 8.6753], initialZoom);
@@ -61,6 +64,8 @@ $(document).ready(function() {
 		else {
 			// Show the lga div
 			$('.lga').show();
+			
+			$('.distributors').hide();
 			
 			// Change the legend text to reflect the name of the state
 			var lgaLegend = document.getElementById("legend-lga");
@@ -138,6 +143,13 @@ $(document).ready(function() {
 							fillOpacity: 0.9
 						}
 					}).addTo(map);
+					
+					if (selectedLGAFeature.properties.admin2Name == "Lagos Mainland") {
+						$('.distributors').show();
+					}
+					else {
+						$('.distributors').hide();
+					}
 
 					// Zoom into the selected LGA
 					map.fitBounds(selectedLGALayer.getBounds());
@@ -228,7 +240,7 @@ $(document).ready(function() {
 						fillColor: stateColors[feature.properties.admin1Name],
 						weight: 1,
 						color: 'white',
-						fillOpacity: 0.7
+						fillOpacity: 1
 					};
 				},
 				onEachFeature: function(feature, layer) {
@@ -328,6 +340,12 @@ $(document).ready(function() {
 				// Zoom into the selected local government area
 				layer.on('click', function(e) {
 					changeLGADropdown(feature.properties.admin2Name);
+					if (feature.properties.admin2Name == "Lagos Mainland") {
+						$('.distributors').show();
+					}
+					else {
+						$('.distributors').hide();
+					}
 					zoomToLGA(feature, e.latlng);
 				});
 			}
