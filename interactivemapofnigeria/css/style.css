@@ -1,12 +1,20 @@
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
 body {
 	margin: 0;
 	padding: 0;
 }
 
 #map {
-    height: 60vh; /* Adjust height dynamically based on viewport */
+	position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 400px; /* Adjust as needed */
     max-width: 100%;
+    min-height: 60vh; /* Prevents it from being too small */
+	overflow: hidden;  /* Prevents scroll issues */
 	background: url('../images/background.jpg') no-repeat center center;
     background-size: cover;
 }
@@ -15,6 +23,47 @@ body {
     .leaflet-tooltip.state-label {
         font-size: 10px;
     }
+	
+	/* Stack .container contents vertically on small screens */
+    .container {
+        flex-direction: column;
+        align-items: center; /* Center items */
+        text-align: center; /* Align text properly */
+    }
+
+    .brand img {
+        max-width: 100px; /* Reduce image size for smaller screens */
+        height: auto;
+    }
+
+    .details {
+        width: 100%; /* Take full width */
+    }
+
+    /* Adjust map size for small screens */
+    #map {
+        height: 300px; /* Reduce map height */
+        min-height: 50vh;
+    }
+
+    /* Make form dropdowns responsive */
+    .statesDiv, .lga {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px;
+    }
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	form {
+		width: 100%;
+	}
 }
 
 .leaflet-interactive:focus {
@@ -28,3 +77,57 @@ body {
     color: black !important; /* Adjust text color if needed */
     font-weight: bold;
 }
+
+.container {
+    display: flex; /* Enables flexbox */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center; /* Align items in the center vertically */
+    gap: 20px; /* Space between brand and details */
+    margin: 20px;
+    padding: 30px;
+}
+
+.brand {
+    flex-shrink: 0; /* Prevents the brand div from shrinking */
+}
+
+.brand img {
+	max-width: 400px; /* Reduce width if necessary */
+    height: auto;
+    display: block;
+}
+
+.details {
+    flex-grow: 1; /* Allows it to expand */
+    display: flex;
+    flex-direction: column; /* Ensures elements stack properly */
+    justify-content: flex-start; /* Aligns items to the top */
+    gap: 5px; /* Adjusts spacing between elements */
+    padding: 0; /* Remove any extra padding */
+    margin: 0; /* Remove default margins */
+}
+
+.details h3,
+.details p {
+    margin: 2px 0; /* Reduce space between headings and paragraphs */
+    padding: 0;
+}
+
+.performance {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.percentage {
+	text-align: right; /* Right-align text */
+	padding-top: 10px; /* Add top padding */
+	padding-bottom: 10px; /* Add bottom padding */
+	color: white; /* White text color */
+}
+
+.low {width: 20%; background-color: #f44336;} /* Red */
+.lowscore {width: 40%; background-color: #f44336;} /* Red */
+.average {width: 60%; background-color: #2196F3;} /* Blue */
+.high {width: 70%; background-color: #04AA6D;} /* Green */
+.below {width: 30%; background-color: #f44336;} /* Red */
