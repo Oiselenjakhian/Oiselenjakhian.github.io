@@ -57,6 +57,8 @@ $(document).ready(function() {
 			if (statesLayer) {
 				map.removeLayer(statesLayer);
 			}
+
+			$('.distributors').hide();
 			
 			// Close all popups on the map
 			map.closePopup();
