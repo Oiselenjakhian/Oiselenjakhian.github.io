@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column; /* This stacks children vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  margin: 0;      /* Remove default browser margin */
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Times Tables Teacher</title>
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="main-wrapper" style="width: 100%; max-width: 500px;">
+			<div class="d-flex justify-content-between mb-3">
+				<p class="mb-0">Time: 0</p>
+				<p class="mb-0">Score: 0</p>
+			</div>
+
+			<div class="input-group mb-3">
+				<input type="text" class="form-control text-center" placeholder="0" disabled>
+				<span class="input-group-text">X</span>
+				<input type="text" class="form-control text-center" placeholder="0" disabled>
+				<span class="input-group-text">=</span>
+				<input type="text" class="form-control text-center" placeholder="0" autofocus oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+			</div>
+			
+			<div class="row g-2 mb-3">
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">1</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">2</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">3</button>
+				</div>
+			</div>
+			
+			<div class="row g-2 mb-3">
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">4</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">5</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">6</button>
+				</div>
+			</div>
+			
+			<div class="row g-2 mb-3">
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">7</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">8</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">9</button>
+				</div>
+			</div>
+			
+			<div class="row g-2">
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">←</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">0</button>
+				</div>
+				<div class="col-4">
+					<button type="button" class="btn btn-outline-secondary w-100 py-3">✓</button>
+				</div>
+			</div>
+		</div>
+		<script src="bootstrap.bundle.min.js"></script>
+	</body>
+</html>
