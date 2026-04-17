@@ -16,7 +16,7 @@ body {
     max-width: 100%;
     min-height: 60vh; /* Prevents it from being too small */
 	overflow: hidden;  /* Prevents scroll issues */
-	background: url('../images/background.jpg') no-repeat center center;
+	/* background: url('../images/background.jpg') no-repeat center center; */
     background-size: cover;
 }
 
