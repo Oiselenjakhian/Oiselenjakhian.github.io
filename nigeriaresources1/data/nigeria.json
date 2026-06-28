@@ -1,0 +1,482 @@
+{
+	"abia":{
+		"region": "South East",
+		"resources":[
+			"Gas",
+			"Gold",
+			"Lead",
+			"Limestone",
+			"Oil",
+			"Salt",
+			"Zinc"
+		]
+	},
+	"adamawa":{
+		"region": "North East",
+		"resources":[
+			"Bentonite",
+			"Gypsum",
+			"Kaolin",
+			"Magnesite"
+		]
+	},
+	"akwa-ibom":{
+		"region": "South South",
+		"resources":[
+			"Clay",
+			"Gas",
+			"Lead",
+			"Lignite",
+			"Limestone",
+			"Oil",
+			"Salt",
+			"Uranium",
+			"Zinc"
+		]
+	},
+	"anambra":{
+		"region": "South East",
+		"resources":[
+			"Clay",
+			"Glass-sand",
+			"Gypsum",
+			"Iron-ore",
+			"Lead",
+			"Lignite",
+			"Limestone",
+			"Phosphate",
+			"Salt",
+			"Zinc"
+		]
+	},
+	"bauchi":{
+		"region": "North East",
+		"resources":[
+			"Cassiterite",
+			"Clay",
+			"Coal",
+			"Columbite",
+			"Gold",
+			"Gypsum",
+			"Iron-ore",
+			"Lignite",
+			"Limestone",
+			"Wolfram"
+		]
+	},
+	"bayelsa":{
+		"region": "South South",
+		"resources":[
+			"Clay",
+			"Gas",
+			"Gypsum",
+			"Lead",
+			"Lignite",
+			"Limestone",
+			"Manganese",
+			"Oil",
+			"Uranium",
+			"Zinc"
+		]
+	},
+	"benue":{
+		"region": "North Central",
+		"resources":[
+			"Barite",
+			"Clay",
+			"Coal",
+			"Gemstone",
+			"Gypsum",
+			"Iron-ore",
+			"Lead",
+			"Limestone",
+			"Marble",
+			"Salt",
+			"Zinc"
+		]
+	},
+	"borno":{
+		"region": "North East",
+		"resources":[
+			"Bentonite",
+			"Clay",
+			"Diatomite",
+			"Gypsum",
+			"Hydro-carbon",
+			"Kaolin",
+			"Limestone"
+		]
+	},
+	"cross-river":{
+		"region": "South South",
+		"resources":[
+			"Barite",
+			"Gas",
+			"Lead",
+			"Lignite",
+			"Limestone",
+			"Manganese",
+			"Oil",
+			"Salt",
+			"Uranium",
+			"Zinc"
+		]
+	},
+	"delta":{
+		"region": "South South",
+		"resources":[
+			"Clay",
+			"Gas",
+			"Glass-sand",
+			"Gypsum",
+			"Iron-ore",
+			"Kaolin",
+			"Lignite",
+			"Marble",
+			"Oil"
+		]
+	},
+	"ebonyi":{
+		"region": "South East",
+		"resources":[
+			"Gold",
+			"Lead",
+			"Salt",
+			"Zinc"
+		]
+	},
+	"edo":{
+		"region": "South South",
+		"resources":[
+			"Bitumen",
+			"Clay",
+			"Dolomite",
+			"Gas",
+			"Glass-sand",
+			"Gold",
+			"Gypsum",
+			"Iron-ore",
+			"Lignite",
+			"Limestone",
+			"Marble",
+			"Oil",
+			"Phosphate"
+		]
+	},
+	"ekiti":{
+		"region": "South West",
+		"resources":[
+			"Feldspar",
+			"Granite",
+			"Kaolin",
+			"Syenite",
+			"Tatum"
+		]
+	},
+	"enugu":{
+		"region": "South East",
+		"resources":[
+			"Coal",
+			"Lead",
+			"Limestone",
+			"Zinc"
+		]
+	},
+	"fct":{
+		"region": "North Central",
+		"resources":[
+			"Cassiterite",
+			"Clay",
+			"Dolomite",
+			"Gold",
+			"Lead",
+			"Marble",
+			"Tantalite",
+			"Zinc"
+		]
+	},
+	"gombe":{
+		"region": "North East",
+		"resources":[
+			"Gemstone",
+			"Gypsum"
+		]
+	},
+	"imo":{
+		"region": "South East",
+		"resources":[
+			"Gas",
+			"Gypsum",
+			"Lead",
+			"Lignite",
+			"Limestone",
+			"Marcasite",
+			"Oil",
+			"Phosphate",
+			"Salt",
+			"Zinc"
+		]
+	},
+	"jigawa":{
+		"region": "North West",
+		"resources":[
+			"Butyles"
+		]
+	},
+	"kaduna":{
+		"region": "North West",
+		"resources":[
+			"Amethyst",
+			"Aqua Marine",
+			"Asbestos",
+			"Clay",
+			"Flosper",
+			"Gemstone",
+			"Gold",
+			"Graphite",
+			"Kaolin",
+			"Kyanite",
+			"Mica",
+			"Rock Crystal",
+			"Ruby",
+			"Sapphire",
+			"Sihnite",
+			"Superntinite",
+			"Tentalime",
+			"Topaz",
+			"Tourmaline"
+		]
+	},
+	"kano":{
+		"region": "North West",
+		"resources":[
+			"Cassiterite",
+			"Copper",
+			"Gemstone",
+			"Glass-sand",
+			"Lead",
+			"Pyrochinre",
+			"Tantalite",
+			"Zinc"
+		]
+	},
+	"katsina":{
+		"region": "North West",
+		"resources":[
+			"Kaolin",
+			"Marble",
+			"Salt"
+		]
+	},
+	"kebbi":{
+		"region": "North West",
+		"resources":[
+			"Gold"
+		]
+	},
+	"kogi":{
+		"region": "North Central",
+		"resources":[
+			"Coal",
+			"Dolomite",
+			"Feldspar",
+			"Gypsum",
+			"Iron-ore",
+			"Kaolin",
+			"Marble",
+			"Talc",
+			"Tantalite"
+		]
+	},
+	"kwara":{
+		"region": "North Central",
+		"resources":[
+			"Cassiterite",
+			"Columbite",
+			"Feldspar",
+			"Gold",
+			"Iron-ore",
+			"Marble",
+			"Mica",
+			"Tantalite"
+		]
+	},
+	"lagos":{
+		"region": "South West",
+		"resources":[
+			"Bitumen",
+			"Clay",
+			"Glass-sand"
+		]
+	},
+	"nasarawa":{
+		"region": "North Central",
+		"resources":[
+			"Amethyst",
+			"Barite",
+			"Barytex",
+			"Cassirite",
+			"Chalcopyrite",
+			"Clay",
+			"Coking Coal",
+			"Columbite",
+			"Dolomite",
+			"Feldspar",
+			"Galena",
+			"Iron-ore",
+			"Limestone",
+			"Marble",
+			"Mica",
+			"Salt",
+			"Sapphire",
+			"Talc",
+			"Tantalite",
+			"Tourmaline Quartz",
+			"Zircon"
+		]
+	},
+	"niger":{
+		"region": "North Central",
+		"resources":[
+			"Gold",
+			"Lead",
+			"Talc",
+			"Zinc"
+		]
+	},
+	"ogun":{
+		"region": "South West",
+		"resources":[
+			"Bitumen",
+			"Clay",
+			"Feldspar",
+			"Gemstone",
+			"Kaolin",
+			"Limestone",
+			"Phosphate"
+		]
+	},
+	"ondo":{
+		"region": "South West",
+		"resources":[
+			"Bitumen",
+			"Clay",
+			"Coal",
+			"Dimension Stones",
+			"Feldspar",
+			"Gas",
+			"Gemstone",
+			"Glass-sand",
+			"Granite",
+			"Gypsum",
+			"Kaolin",
+			"Limestone",
+			"Oil"
+		]
+	},
+	"osun":{
+		"region": "South West",
+		"resources":[
+			"Columbite",
+			"Gold",
+			"Granite",
+			"Talc",
+			"Tantalite",
+			"Tourmaline"
+		]
+	},
+	"oyo":{
+		"region": "South West",
+		"resources":[
+			"Aqua Marine",
+			"Cassiterite",
+			"Clay",
+			"Dolomite",
+			"Gemstone",
+			"Gold",
+			"Kaolin",
+			"Marble",
+			"Silimonite",
+			"Talc",
+			"Tantalite"
+		]
+	},
+	"plateau":{
+		"region": "North Central",
+		"resources":[
+			"Barite",
+			"Bauxite",
+			"Betonite",
+			"Bismuth",
+			"Cassiterite",
+			"Clay",
+			"Coal",
+			"Columbite",
+			"Emerald",
+			"Fluoride",
+			"Gemstone",
+			"Granite",
+			"Iron-ore",
+			"Kaolin",
+			"Lead",
+			"Marble",
+			"Molybdenite",
+			"Phrochlore",
+			"Salt",
+			"Tantalite",
+			"Tin",
+			"Wolfram",
+			"Zinc"
+		]
+	},
+	"rivers":{
+		"region": "South South",
+		"resources":[
+			"Clay",
+			"Gas",
+			"Glass-sand",
+			"Lignite",
+			"Marble",
+			"Oil"
+		]
+	},
+	"sokoto":{
+		"region": "North West",
+		"resources":[
+			"Clay",
+			"Flakes",
+			"Gold",
+			"Granite",
+			"Gypsum",
+			"Kaolin",
+			"Laterite",
+			"Limestone",
+			"Phosphate",
+			"Potash",
+			"Salt",
+			"Silica Sand"
+		]
+	},
+	"taraba":{
+		"region": "North East",
+		"resources":[
+			"Lead",
+			"Zinc"
+		]
+	},
+	"yobe":{
+		"region": "North East",
+		"resources":[
+			"Soda Ash",
+			"Tintomite"
+		]
+	},
+	"zamfara":{
+		"region": "North West",
+		"resources":[
+			"Coal",
+			"Cotton",
+			"Gold"
+		]
+	}
+}
