@@ -1,0 +1,196 @@
+/* Reset margins and set full height */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100vh;
+	font-family: Arial, sans-serif;
+}
+
+/* Container for side panel and map */
+.app-container {
+	display: flex;
+	height: 100vh;
+	width: 100vw; /* Force full viewport width */
+	overflow: hidden; /* Prevent unwanted scrollbars */
+}
+
+ /* Side Panel Styling */
+.side-panel {
+	width: 350px;
+	background-color: #f8f9fa;
+	padding: 20px;
+	box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+	overflow-y: auto; /* Adds scrolling for long content */
+	z-index: 10;
+	
+	/* Turn the panel into a Flexbox column */
+	display: flex;
+	flex-direction: column;
+	
+	/* Handle height and scrolling beautifully */
+	height: 100%; 
+	overflow-y: auto; /* Adds scrolling ONLY for the content above the footer if it gets too long */
+}
+
+.side-panel h2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+/* 3. Style and position the attribution text */
+.panel-attribution {
+	margin-top: auto;          /* The magic rule: pushes the paragraph to the very bottom */
+	padding-top: 30px;         /* Gives breathing room below the selectors */
+	font-size: 11px;
+	color: #666;
+	line-height: 1.4;
+	word-wrap: break-word;     /* Ensures long URLs don't break the layout */
+	border-top: 1px solid #e9ecef; /* Optional: adds a clean, subtle separator line */
+}
+
+.panel-attribution a {
+	color: #0066cc;
+	text-decoration: none;
+}
+
+.panel-attribution a:hover {
+	text-decoration: underline;
+}
+
+/* Map Container - The wrapper taking up the remaining screen space */
+.map-container {
+	flex-grow: 1; /* Stretch to fill remaining horizontal space */
+	height: 100%; /* Fill full vertical space */
+	background-color: #e5e3df; 
+	position: relative;
+	
+	/* Remove 'justify-content: center' and 'align-items: center' if they 
+	   are trapping your map inside a smaller flex boundary */
+	display: block; 
+}
+
+input[type="text"] {
+	width: 100%;
+	height: 50px; /* Search bars look great slightly sleeker than textareas */
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+select {
+	/* Sets fixed sizing  */
+	width: 100%;
+	
+	/* Adds spacing and clean borders */
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* The D3 target div */
+#map {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Target the actual SVG element once it's injected */
+#map svg {
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+.map-container {
+	flex-grow: 1; 
+	background-color: #e5e3df; 
+	position: relative;
+	display: flex;
+	justify-content: center; 
+	align-items: center;     
+	padding: 20px; /* Optional: gives the map breathing room from edges */
+	touch-action: none;
+}
+
+#map-controls {
+	position: absolute; /* Changed from display:flex layout constraint */
+	bottom: 20px;
+	left: 20px;       /* Puts it cleanly in the bottom-left corner */
+	display: flex;
+	flex-direction: column;
+	gap: 10px; 
+	z-index: 20;
+}
+
+.button {
+	background-color: grey;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+#tooltip {
+    background-color: rgba(33, 37, 41, 0.9); /* Dark slate gray background */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.15s ease; /* Smooth fade-in/fade-out */
+    pointer-events: none; /* Crucial: stops the tooltip from flickering when the mouse moves over it */
+    z-index: 100;
+}
+
+/* Add this class to handle map fading when a query filters down the states */
+path.faded {
+    fill-opacity: 0.15 !important;
+    stroke-opacity: 0.4 !important;
+    transition: all 0.2s ease;
+}
+
+path.highlighted-search {
+    fill: #008751 !important; /* Highlights matching states in deep green */
+    stroke: #ffffff !important;
+    stroke-width: 2px !important;
+    fill-opacity: 1 !important;
+    stroke-opacity: 1 !important;
+    transition: all 0.2s ease;
+}
+
+/* Styling for a state selected via dropdown or direct click */
+path.selected-state {
+    fill: #008751 !important; /* Vibrant green highlight */
+    stroke: #ffffff !important;
+    stroke-width: 2.5px !important;
+    fill-opacity: 1 !important;
+    stroke-opacity: 1 !important;
+    transition: all 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.app-container {
+		flex-direction: column-reverse; /* Puts panel below map on small screens */
+	}
+	.side-panel {
+		width: 100%;
+		/* height: 50vh; Takes up exactly 50% of the screen height */
+		height: 350px;
+	}
+}
