@@ -23,3 +23,17 @@ function returnToMenu() {
 
 	showMainMenu();
 }
+
+function showPanel(panelId) {
+	// Hide the main menu buttons
+	document.querySelector(".menu-buttons").style.display = "none";
+
+	// Hide all information panels
+	document.querySelectorAll(".menu-panel").forEach(panel => {
+		panel.style.display = "none";
+	});
+
+	// Display the selected panel
+	document.getElementById(panelId).style.display = "block";
+}
+}
