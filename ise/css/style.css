@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 10px;
     overflow-x: hidden;
@@ -20,7 +20,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: #8B4513;
-	padding: 20px;
+	padding: 10px;
 	border-radius: 15px;
 	box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 
@@ -130,7 +130,6 @@ button:hover {
 		font-size: 17px;
 	}
 }
-
 
 /* --------------------------------
    Mobile phones
@@ -411,13 +410,13 @@ button:hover {
    MOBILE SCROLLBAR FIX
    ================================== */
 
-/* Prevent horizontal overflow */
-html,
-body {
+/* Prevent both vertical and horizontal scrolling on mobile */
+html, body {
     width: 100%;
-    max-width: 100%;
+    height: 100%;
     margin: 0;
-    overflow-x: hidden;
+    padding: 0;
+    overflow: hidden; /* Locks the screen from scrolling */
 }
 
 /* Use modern mobile viewport sizing */
@@ -427,23 +426,30 @@ body {
     height: auto;
 }
 
-/* Intro screen */
 #intro-screen {
     width: 100%;
-    min-height: 100vh;
-    min-height: 100svh;
-    height: auto;
-    padding: 15px;
-}
-
-/* Game screen */
-#game-screen {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100svh;
-    height: auto;
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Ensure game screen fits exactly into the viewport */
+#game-screen {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Prevent board from exceeding screen width */
