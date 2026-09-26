@@ -3,16 +3,16 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f4f4f9;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	margin: 0;
-	padding: 20px;
-	overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
 }
 
 #game-board {
@@ -404,4 +404,105 @@ button:hover {
 		padding: 10px 12px;
 		font-size: 14px;
 	}
+}
+
+
+/* ==================================
+   MOBILE SCROLLBAR FIX
+   ================================== */
+
+/* Prevent horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Use modern mobile viewport sizing */
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+}
+
+/* Intro screen */
+#intro-screen {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+    padding: 15px;
+}
+
+/* Game screen */
+#game-screen {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Prevent board from exceeding screen width */
+#game-board {
+    width: 100%;
+    max-width: 700px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Allow the board's inner content to shrink */
+.rows {
+    min-width: 0;
+}
+
+/* Keep pits from forcing horizontal overflow */
+.pit-row {
+    min-width: 0;
+    justify-content: center;
+}
+
+/* Keep game controls within the screen */
+.game-controls {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+
+    body {
+        padding: 5px;
+    }
+
+    #intro-screen {
+        padding: 10px;
+    }
+
+    #game-screen {
+        padding: 5px;
+    }
+
+    #game-board {
+        padding: 7px;
+    }
+
+    .store {
+        margin: 0 3px;
+    }
+
+    .pit {
+        margin: 2px;
+    }
+}
+
+.menu-panel {
+    max-height: 65vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
