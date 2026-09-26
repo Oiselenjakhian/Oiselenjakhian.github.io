@@ -16,9 +16,9 @@
 				
 				<div class="menu-buttons">
 					<button onclick="startGame()">Play</button>
-					<button>Instructions</button>
-					<button>Settings</button>
-					<button>Credits</button>
+					<button onclick="showPanel('instructions')">Instructions</button>
+					<button onclick="showPanel('settings')">Settings</button>
+					<button onclick="showPanel('credits')">Credits</button>
 				</div>
 				
 				<!-- Instructions Panel -->
@@ -36,7 +36,7 @@
 						<li>The grand finale occurs when only 8 seeds are left on the entire board. At this point the first person to capture wins the remaining 4 seeds.</li>
 					</ol>
 					
-					<button>Back</button>
+					<button onclick="showMainMenu()">Back</button>
 				</div>
 				
 				<!-- Settings Panel -->
@@ -53,7 +53,7 @@
 						Show Seed Distribution
 					</label>
 					
-					<button>Back</button>
+					<button onclick="showMainMenu()">Back</button>
 				</div>
 				
 				<!-- Credits Panel -->
@@ -65,7 +65,7 @@
 					<p><strong>Technology:</strong> HTML, CSS and JavaScript</p>
 					<p>Inspired by the traditional Mancala family of board games.</p>
 
-					<button>Back</button>
+					<button onclick="showMainMenu()">Back</button>
 				</div>
 			</div>
 		</div>
