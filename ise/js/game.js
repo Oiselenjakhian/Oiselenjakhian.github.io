@@ -36,4 +36,3 @@ function showPanel(panelId) {
 	// Display the selected panel
 	document.getElementById(panelId).style.display = "block";
 }
-}
