@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ise</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="icon" type="image/jpeg" href="img/ise.jpg">
+	</head>
+	<body>
+		<!-- Introduction Screen -->
+		<div id="intro-screen">
+			<div class="intro-container">
+				<h1 class="game-title">Ise</h1>
+				<p class="game-subtitle">This is a simple Mancala type game! Similar to Ayo and Oware.</p>
+				
+				<div class="menu-buttons">
+					<button onclick="startGame()">Play</button>
+					<button>Instructions</button>
+					<button>Settings</button>
+					<button>Credits</button>
+				</div>
+				
+				<!-- Instructions Panel -->
+				<div id="instructions" class="menu-panel">
+					<h2>How to Play</h2>
+					<p>Welcome to Ise! The objective is to collect more seeds in your store than your opponent.</p>
+					
+					<ol>
+						<li>Each player controls six pits on their side of the board.</li>
+						<li>Select one of your pits to pick up its seeds.</li>
+						<li>The seeds are distributed one by one into subsequent pits by moving in a counter-clockwise direction.</li>
+						<li>In the process of gameplay, the number of seeds in a pot can reach up to 4. Once this happens, the seeds are captured. Capture can be direct or incidental.</li>
+						<li>With direct capture, the sowing ends in a pot that already has 3 seeds. When this occurs, the seed that would be added makes the number of seeds in that pot equal to 4. As a result of this, the player who did the sowing will get the seeds that are captured assigned to the player.</li>
+						<li>With incidental capture, the sowing during the course of the game increases the number of seeds in a pot to 4. The seeds that are captured are then assigned to the owner of the pot.</li>
+						<li>The grand finale occurs when only 8 seeds are left on the entire board. At this point the first person to capture wins the remaining 4 seeds.</li>
+					</ol>
+					
+					<button>Back</button>
+				</div>
+				
+				<!-- Settings Panel -->
+				<div id="settings" class="menu-panel">
+					<h2>Settings</h2>
+
+					<label class="setting-option">
+						<input type="checkbox" id="sound-toggle" checked>
+						Enable Sound Effects
+					</label>
+					
+					<label class="setting-option">
+						<input type="checkbox" id="distribution-toggle" checked>
+						Show Seed Distribution
+					</label>
+					
+					<button>Back</button>
+				</div>
+				
+				<!-- Credits Panel -->
+				<div id="credits" class="menu-panel">
+					<h2>Credits</h2>
+
+					<p><strong>Game:</strong> Ise</p>
+					<p><strong>Developer:</strong> Truston Ailende</p>
+					<p><strong>Technology:</strong> HTML, CSS and JavaScript</p>
+					<p>Inspired by the traditional Mancala family of board games.</p>
+
+					<button>Back</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Game Screen -->
+		<div id="game-screen" style="display: none;">
+			<div id="status">Player's Turn</div>
+			
+			<div id="game-board">
+				<div id="store-2" class="store">0</div>
+				<div class="rows">
+					<div id="row-2" class="pit-row">
+						<!-- Top row: Player 2 pits (indices 12 down to 7) -->
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+					</div>
+					<div id="row-1" class="pit-row">
+						<!-- Bottom row: Player 1 pits (indices 0 to 5) -->
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+						<div class="pit">4</div>
+					</div>
+				</div>
+				<div id="store-1" class="store">0</div>
+			</div>
+				
+			<div class="game-controls">
+				<button onclick="resetGame()">Restart Game</button>
+				<button onclick="returnToMenu()">Main Menu</button>
+			</div>
+		</div>
+		
+		<script src="js/game.js"></script>
+	</body>
+</html>
